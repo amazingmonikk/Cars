@@ -22,9 +22,14 @@ var imageModule = (function () {
             var output = "<div>"
 
             for (var key in this.carImages) {
-                console.log(key)
-                console.log(this.carImages[key])
+                output += '<div class="col-lg-3 col-md-4 col-xs-6 thumb">'
+                output += '<a class= "thumbnail" href="' + this.carImages[key] + '">'
+                output += '<img class="img-responsove" src="images/' + key + '.jpg' + '" alt="">'
+                output += '</a>'
+                output += '</div>'
+                console.log(output)
             }
+            output = '</div>'
         }
     }
 })()
